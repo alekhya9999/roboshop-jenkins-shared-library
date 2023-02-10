@@ -12,7 +12,6 @@ def call() {
                 steps {
                     echo 'compile'
                 }
-
             }
             stage('Unit Tests') {
                 steps {
