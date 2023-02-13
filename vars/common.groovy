@@ -6,5 +6,5 @@ def compile(){
         sh 'mvn package'
     }
 
-    
+
 }
