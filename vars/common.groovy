@@ -7,8 +7,8 @@ def compile(){
     }
 
     if(app_lang == "golang") {
-        sh 'go mod init dispatch\n' +
-                'go get \n' +
-                'go build'
+        sh 'go mod init '
+              sh  'go get '
+              sh  'go build'
     }
 }
