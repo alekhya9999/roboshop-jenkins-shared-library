@@ -20,6 +20,3 @@ def unittests(){
         sh 'python3 -m unittest'
     }
 }
-def email(email_note) {
-    println email_note
-}
