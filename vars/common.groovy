@@ -8,11 +8,8 @@ def compile(){
 }
 def unittests() {
     if (app_lang == "nodejs") {
-        try {
+
             sh 'npm test'
-        }
-        catch (Exception e) {
-            email("unit tests failed")
         }
 
     }
@@ -23,7 +20,7 @@ def unittests() {
     if(app_lang == "pytho n"){
         sh 'python3 -m unittest'
     }
-  }
+
 
 def email(email_note){
     println email_note
