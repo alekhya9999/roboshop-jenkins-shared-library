@@ -1,13 +1,10 @@
 def call() {
     try {
         pipeline {
-
             agent {
                 label 'workstation'
             }
-
             stages {
-
                 stage('Compile/Build') {
                     steps {
                         script {
