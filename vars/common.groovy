@@ -9,7 +9,7 @@ def compile(){
 def unittests() {
     if (app_lang == "nodejs") {
 
-            sh 'npm test || true  '
+            sh 'npm test '
         }
 
     }
@@ -23,7 +23,7 @@ def unittests() {
 
 
     def email(email_note) {
-        mail bcc: '', body: "Job Failed - ${JOB_BASE_NAME}\nJenkins URL - ${JOB_URL}", cc: '', from: 'asri42080@gmail.com', replyTo: '', subject: "Jenkins Job Failed - ${JOB_BASE_NAME}", to: 'asri42080@gmail.com'
+        println email_note
     }
 
 
