@@ -11,7 +11,7 @@ def unittests() {
         try {
             sh 'npm test'
         }
-        catch (exception e) {
+        catch (Exception e) {
             email("unit tests failed")
         }
 
