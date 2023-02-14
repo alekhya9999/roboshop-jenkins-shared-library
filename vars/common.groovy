@@ -26,9 +26,7 @@ def unittests() {
     sh 'go build'
    }
 
-    def email(email_note) {
-        println email_note
-    }
+
 
 
 
