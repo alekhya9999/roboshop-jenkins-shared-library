@@ -6,17 +6,27 @@ def compile(){
         sh 'mvn package'
     }
 }
-def unittests(){
-    if(app_lang == "nodejs"){
-        //sh 'npm test || true'
-        sh'echo testcases'
+def unittests() {
+    if (app_lang == "nodejs") {
+        try {
+            sh 'npm test'
+        }
+        catch (exception e) {
+            email("unit tests failed")
+        }
+
     }
-    if(app_lang == "maven"){
+    if(app_lang == "mave n"){
         sh 'mvn test'
     }
 
-    if(app_lang == "python"){
+    if(app_lang == "pytho n"){
         sh 'python3 -m unittest'
     }
-}
+  }
+
+def email(email_note){
+    println email_note
+ }
+
 
