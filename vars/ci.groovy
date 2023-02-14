@@ -32,7 +32,7 @@ def call() {
             }
         }
     }
-    catch (Exception e) {
+    catch(Exception e) {
         common.email("failed")
        }
 }
