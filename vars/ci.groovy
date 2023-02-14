@@ -25,13 +25,11 @@ def call() {
                         echo 'quality control'
                     }
                 }
-
                 stage('Upload code to centralized place') {
                     steps {
                         echo 'upload'
                     }
                 }
-
             }
         }
     }
