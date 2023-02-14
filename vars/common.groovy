@@ -13,11 +13,11 @@ def unittests() {
         }
 
     }
-    if(app_lang == "mave n"){
+    if(app_lang == "maven"){
         sh 'mvn test'
     }
 
-    if(app_lang == "pytho n"){
+    if(app_lang == "python"){
         sh 'python3 -m unittest'
     }
 
