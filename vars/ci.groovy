@@ -19,7 +19,6 @@ def call() {
                         }
                     }
                 }
-
                 stage('Quality Control') {
                     steps {
                         echo 'quality control'
