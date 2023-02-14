@@ -20,7 +20,11 @@ def unittests() {
     if(app_lang == "python"){
         sh 'python3 -m unittest'
     }
-
+    if(app_lang == "golang"){
+    sh ' go mod init dispatch '
+    sh 'go get'
+    sh 'go build'
+   }
 
     def email(email_note) {
         println email_note
