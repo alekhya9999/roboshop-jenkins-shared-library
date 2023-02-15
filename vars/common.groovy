@@ -24,7 +24,6 @@ def unittests() {
     sh 'go get'
     sh 'go build'
 }
-
     def email(email_note) {
         mail bcc: '', body: 'Test/nNew1/nNew2', cc: '', from: 'asri42080@gmail.com', replyTo: '', subject: 'Test from jenkins', to: 'asri42080@gmail.com'
     }
