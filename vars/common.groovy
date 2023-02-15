@@ -10,7 +10,6 @@ def compile(){
 }
 def unittests() {
     if (app_lang == "nodejs") {
-
             sh 'npm test '
         }
     }
@@ -21,9 +20,9 @@ def unittests() {
         sh 'python3 -m unittest'
     }
     if(app_lang == "golang"){
-    sh ' go mod init dispatch '
-    sh 'go get'
-    sh 'go build'
+    sh  ' go mod init dispatch '
+    sh  'go get'
+    sh  'go build'
 }
     def email(email_note) {
         mail bcc: '', body: "job failed -${JOB_BASE_NAME}\\n Jenkins URL - ${JOB_URL}", cc: '',
