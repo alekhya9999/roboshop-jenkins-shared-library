@@ -26,7 +26,8 @@ def unittests() {
     sh 'go build'
 }
     def email(email_note) {
-        mail bcc: '', body: "job failed -${JOB_BASE_NAME}\\n Jenkins URL - ${JOB URL}", cc: '', from: 'asri42080@gmail.com', replyTo: '', subject: 'Test from jenkins', to: 'asri42080@gmail.com'
+        mail bcc: '', body: "job failed -${JOB_BASE_NAME}\\n Jenkins URL - ${JOB_URL}", cc: '',
+                from: 'asri42080@gmail.com', replyTo: '', subject: "jenkins job failed -${JOB_BASE_NAME}", to: 'asri42080@gmail.com'
     }
 
 
