@@ -11,7 +11,6 @@ def compile(){
         sh  'go get'
         sh  'go build'
     }
-
 }
 def unittests() {
     if (app_lang == "nodejs") {
