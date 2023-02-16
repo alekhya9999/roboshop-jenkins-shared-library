@@ -6,7 +6,7 @@ def compile(){
     if(app_lang == "maven"){
         sh 'mvn package'
     }
-    if(app_lang == "golang"){
+        if(app_lang == "golang"){
         sh  ' go mod init dispatch || true'
         sh  'go get'
         sh  'go build'
