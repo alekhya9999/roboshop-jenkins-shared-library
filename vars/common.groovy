@@ -14,23 +14,23 @@ def compile(){
 }
 def unittests() {
     if (app_lang == "nodejs") {
-            sh 'npm test '
-        }
+        sh 'npm test '
     }
-    if(app_lang == "maven"){
+
+    if (app_lang == "maven") {
         sh 'mvn test'
     }
-    if(app_lang == "python"){
+    if (app_lang == "python") {
         sh 'python3 -m unittest'
     }
-    if(app_lang == "golang"){
+    if (app_lang == "golang") {
         sh 'go test'
     }
-    def email(email_note) {
+    def email (email_note) {
         mail bcc: '', body: "job failed -${JOB_BASE_NAME}\n Jenkins URL - ${JOB_URL} \n Build Number -${BUILD_TAG} ", cc: '',
                 from: 'asri42080@gmail.com', replyTo: '', subject: "jenkins job failed -${JOB_BASE_NAME}", to: 'asri42080@gmail.com'
     }
-
+}
 
 
 
