@@ -26,7 +26,6 @@ def unittests() {
     if(app_lang == "golang"){
     sh 'go test'
 }
-
     def email(email_note) {
         mail bcc: '', body: "job failed -${JOB_BASE_NAME}\\n Jenkins URL - ${JOB_URL}", cc: '',
                 from: 'asri42080@gmail.com', replyTo: '', subject: "jenkins job failed -${JOB_BASE_NAME}", to: 'asri42080@gmail.com'
