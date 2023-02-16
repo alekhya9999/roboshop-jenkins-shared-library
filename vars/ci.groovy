@@ -31,9 +31,18 @@ def call() {
                 }
             }
         }
+        post{
+            always{
+                cleanWs()
+            }
+        }
+
     }
+
     catch(Exception e) {
         common.email("Failed")
        }
+
+
 }
 
